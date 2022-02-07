@@ -25,7 +25,6 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     }
     
     func createDetailModule(book: Book?, router: RouterProtocol) -> UIViewController {
-        // TODO: Create Detail Module
         let networkService = NetworkService()
         let view = DetailViewController()
         let presenter = DetailViewPresenter(view: view, networkService: networkService, router: router, book: book)

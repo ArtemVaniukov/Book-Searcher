@@ -10,11 +10,11 @@ import UIKit
 
 protocol SearchViewProtocol: AnyObject {
     func success()
-    func error(with error: Error)
+    func failure(with error: Error)
 }
 
 protocol SearchViewPresenterProtocol: AnyObject {
-    var books: [Book]? { get set }
+    var books: [Book]? { get }
     init(view: SearchViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     func getBooks(with query: String)
     func didTapBook(_ book: Book?)
@@ -26,7 +26,7 @@ class SearchViewPresenter: SearchViewPresenterProtocol {
     private var router: RouterProtocol?
     private let networkService: NetworkServiceProtocol
     
-    var books: [Book]?
+    private(set) var books: [Book]?
     
     
     required init(view: SearchViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
@@ -44,7 +44,7 @@ class SearchViewPresenter: SearchViewPresenterProtocol {
                     self?.books = books
                     self?.view?.success()
                 case .failure(let error):
-                    self?.view?.error(with: error)
+                    self?.view?.failure(with: error)
                 }
             }
         }

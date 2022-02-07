@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A28122827B173520034BEFE /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A28122727B173520034BEFE /* RouterTest.swift */; };
 		3A9E033127B1034100BCBEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E033027B1034100BCBEDE /* AppDelegate.swift */; };
 		3A9E033327B1034100BCBEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E033227B1034100BCBEDE /* SceneDelegate.swift */; };
 		3A9E033527B1034100BCBEDE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E033427B1034100BCBEDE /* SearchViewController.swift */; };
 		3A9E033A27B1034500BCBEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E033927B1034500BCBEDE /* Assets.xcassets */; };
-		3A9E034827B1034500BCBEDE /* Book_SearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E034727B1034500BCBEDE /* Book_SearcherTests.swift */; };
 		3A9E035227B1034500BCBEDE /* Book_SearcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E035127B1034500BCBEDE /* Book_SearcherUITests.swift */; };
 		3A9E035427B1034500BCBEDE /* Book_SearcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E035327B1034500BCBEDE /* Book_SearcherUITestsLaunchTests.swift */; };
 		3A9E036327B1056B00BCBEDE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036227B1056B00BCBEDE /* Book.swift */; };
@@ -24,6 +24,7 @@
 		3A9E037827B1213F00BCBEDE /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */; };
 		3A9E037B27B1421000BCBEDE /* DetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037A27B1421000BCBEDE /* DetailViewPresenter.swift */; };
 		3A9E037D27B143C500BCBEDE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037C27B143C500BCBEDE /* DetailViewController.swift */; };
+		3A9E038427B16BB200BCBEDE /* SearchPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E038327B16BB200BCBEDE /* SearchPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A28122727B173520034BEFE /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 		3A9E032D27B1034100BCBEDE /* Book Searcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Searcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9E033027B1034100BCBEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9E033227B1034100BCBEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		3A9E033927B1034500BCBEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A9E033E27B1034500BCBEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9E034327B1034500BCBEDE /* Book SearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book SearcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A9E034727B1034500BCBEDE /* Book_SearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_SearcherTests.swift; sourceTree = "<group>"; };
 		3A9E034D27B1034500BCBEDE /* Book SearcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book SearcherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9E035127B1034500BCBEDE /* Book_SearcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_SearcherUITests.swift; sourceTree = "<group>"; };
 		3A9E035327B1034500BCBEDE /* Book_SearcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_SearcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 		3A9E037A27B1421000BCBEDE /* DetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPresenter.swift; sourceTree = "<group>"; };
 		3A9E037C27B143C500BCBEDE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3A9E038327B16BB200BCBEDE /* SearchPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,8 @@
 		3A9E034627B1034500BCBEDE /* Book SearcherTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A9E034727B1034500BCBEDE /* Book_SearcherTests.swift */,
+				3A9E038327B16BB200BCBEDE /* SearchPresenterTest.swift */,
+				3A28122727B173520034BEFE /* RouterTest.swift */,
 			);
 			path = "Book SearcherTests";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 					};
 					3A9E034227B1034500BCBEDE = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 3A9E032C27B1034100BCBEDE;
 					};
 					3A9E034C27B1034500BCBEDE = {
@@ -380,7 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A9E034827B1034500BCBEDE /* Book_SearcherTests.swift in Sources */,
+				3A9E038427B16BB200BCBEDE /* SearchPresenterTest.swift in Sources */,
+				3A28122827B173520034BEFE /* RouterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +471,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -520,7 +527,9 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -537,9 +546,10 @@
 				INFOPLIST_FILE = "Book Searcher/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,6 +558,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Vaniukov.Book-Searcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -565,9 +579,10 @@
 				INFOPLIST_FILE = "Book Searcher/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,6 +591,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Vaniukov.Book-Searcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_REFLECTION_METADATA_LEVEL = all;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -586,15 +605,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N889S8P6M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Vaniukov.Book-SearcherTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Book Searcher.app/Book Searcher";
@@ -606,11 +632,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N889S8P6M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Vaniukov.Book-SearcherTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,6 +665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Vaniukov.Book-SearcherUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Book Searcher";
@@ -651,6 +684,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Artem-Vaniukov.Book-SearcherUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Book Searcher";

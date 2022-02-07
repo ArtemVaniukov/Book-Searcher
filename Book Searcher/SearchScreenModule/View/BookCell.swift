@@ -35,6 +35,8 @@ class BookCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
+        
         addAutolayoutSubviews(thumbnailView, mainLabel, additionalLabel)
         setupLayout()
     }
@@ -68,6 +70,8 @@ extension BookCell {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             thumbnailView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            thumbnailView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 10),
+            thumbnailView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -10),
             thumbnailView.centerYAnchor.constraint(equalTo: centerYAnchor),
             thumbnailView.heightAnchor.constraint(equalToConstant: 60),
             thumbnailView.widthAnchor.constraint(equalToConstant: 60),

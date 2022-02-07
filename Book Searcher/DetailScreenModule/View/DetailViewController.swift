@@ -62,7 +62,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.addAutolayoutSubviews(thumbnail, scrollView)
         
         scrollView.addAutolayoutSubview(scrollViewContent)
@@ -86,7 +86,7 @@ extension DetailViewController: DetailViewProtocol {
 
 extension DetailViewController {
     private func setupViews() {
-        guard let book = book else { print("Book is nil"); return }
+        guard let book = book else { return }
         
         let imageService = ImageDownloadService()
         let thumbnailURL = book.volumeInfo.imageLinks.thumbnail
@@ -129,10 +129,9 @@ extension DetailViewController {
             authorLabel.leadingAnchor.constraint(equalTo: scrollViewContent.leadingAnchor, constant: 40),
             authorLabel.topAnchor.constraint(equalTo: bookLabel.bottomAnchor, constant: 10),
             authorLabel.trailingAnchor.constraint(equalTo: scrollViewContent.trailingAnchor, constant: -40),
-            authorLabel.heightAnchor.constraint(equalToConstant: 20),
             
             descriptionLabel.leadingAnchor.constraint(equalTo: scrollViewContent.leadingAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: authorLabel.topAnchor, constant: 40),
+            descriptionLabel.topAnchor.constraint(equalTo: authorLabel.bottomAnchor, constant: 30),
             descriptionLabel.trailingAnchor.constraint(equalTo: scrollViewContent.trailingAnchor),
             descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: scrollViewContent.bottomAnchor)
         ])

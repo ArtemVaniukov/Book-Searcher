@@ -11,7 +11,7 @@ class SearchViewController: UIViewController {
     
     var presenter: SearchViewPresenter!
     
-    private lazy var searchBar = UISearchBar(frame: .infinite)
+    private lazy var searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 1500, height: 30))
     private let bookCellID = "BookCellID"
     
     private lazy var tableView: UITableView = {
@@ -23,10 +23,11 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .systemBackground
+        
         setupSearchBar()
         setupTableView()
         
-        view.backgroundColor = .white
         view.addAutolayoutSubview(tableView)
     }
 
@@ -42,7 +43,7 @@ extension SearchViewController: SearchViewProtocol {
         tableView.reloadData()
     }
     
-    func error(with error: Error) {
+    func failure(with error: Error) {
         // TODO: Move to a separate class
         let alertVC = UIAlertController(title: "WHOOPS!", message: error.localizedDescription, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
@@ -74,6 +75,10 @@ extension SearchViewController: UITableViewDelegate {
         let book = presenter.books?[indexPath.row]
         presenter.didTapBook(book)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -81,6 +86,7 @@ extension SearchViewController: UISearchBarDelegate {
         if let query = searchBar.text {
             presenter.getBooks(with: query)
         }
+        searchBar.resignFirstResponder()
     }
 }
 
@@ -97,7 +103,6 @@ extension SearchViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupLayout() {
