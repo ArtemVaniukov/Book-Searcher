@@ -59,8 +59,13 @@ extension BookCell {
         mainLabel.text = book.volumeInfo.title
         additionalLabel.text = book.volumeInfo.authors?.joined(separator: ", ")
         
+        guard let url = book.volumeInfo.imageLinks?.smallThumbnail else {
+            thumbnailView.image = UIImage(named: "noImage")
+            return
+        }
+        
         let imageDownloadService = ImageDownloadService()
-        imageDownloadService.downloadImage(from: book.volumeInfo.imageLinks.smallThumbnail!) { [weak self] image in
+        imageDownloadService.downloadImage(from: url) { [weak self] image in
             DispatchQueue.main.async {
                 self?.thumbnailView.image = image
             }

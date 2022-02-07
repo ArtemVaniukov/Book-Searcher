@@ -88,19 +88,23 @@ extension DetailViewController {
     private func setupViews() {
         guard let book = book else { return }
         
-        let imageService = ImageDownloadService()
-        let thumbnailURL = book.volumeInfo.imageLinks.thumbnail
-        
-        imageService.downloadImage(from: thumbnailURL!) { image in
-            DispatchQueue.main.async { [weak self] in
-                self?.thumbnail.image = image
-            }
-        }
-        
         DispatchQueue.main.async { [weak self] in
             self?.bookLabel.text = book.volumeInfo.title
             self?.authorLabel.text = book.volumeInfo.authors?.joined(separator: ", ")
             self?.descriptionLabel.text = book.volumeInfo.description
+        }
+        
+        guard let thumbnailURL = book.volumeInfo.imageLinks?.thumbnail else {
+            thumbnail.image = UIImage(named: "noImage")
+            return
+        }
+        
+        let imageService = ImageDownloadService()
+        
+        imageService.downloadImage(from: thumbnailURL) { image in
+            DispatchQueue.main.async { [weak self] in
+                self?.thumbnail.image = image
+            }
         }
     }
     
