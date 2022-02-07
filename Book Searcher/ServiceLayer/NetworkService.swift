@@ -29,7 +29,6 @@ class NetworkService: NetworkServiceProtocol {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
-                print(error)
                 completion(.failure(error))
                 return
             }
@@ -43,7 +42,6 @@ class NetworkService: NetworkServiceProtocol {
                 let response = try JSONDecoder().decode(BookResponse.self, from: data)
                 completion(.success(response.items))
             } catch {
-                print(error)
                 completion(.failure(error))
             }
         }.resume()
