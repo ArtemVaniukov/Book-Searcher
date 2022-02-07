@@ -8,32 +8,28 @@
 import UIKit
 
 
-enum ImageDownloadError: Error {
-    case badURL(String)
-    case badData(String)
-}
-
 protocol ImageDownloadProtocol {
-    func downloadImage(from url: String, completion: @escaping (Result<UIImage?, Error>) -> Void)
+    func downloadImage(from url: String, completion: @escaping (UIImage?) -> Void)
 }
 
 class ImageDownloadService: ImageDownloadProtocol {
-    func downloadImage(from url: String, completion: @escaping (Result<UIImage?, Error>) -> Void) {
+    
+    func downloadImage(from url: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: url) else {
-            completion(.failure(ImageDownloadError.badURL(url)))
+            completion(nil)
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-            if let error = error {
-                completion(.failure(error))
+            if error != nil {
+                completion(nil)
                 return
             }
             
             if let data = data, let image = UIImage(data: data) {
-                completion(.success(image))
+                completion(image)
             } else {
-                completion(.failure(ImageDownloadError.badData("Wrong image data")))
+                completion(nil)
             }
         }.resume()
     }

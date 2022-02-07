@@ -20,8 +20,6 @@ protocol NetworkServiceProtocol {
 class NetworkService: NetworkServiceProtocol {
     func fetchBooks(with query: String, completion: @escaping (Result<[Book]?, Error>) -> Void) {
         let baseURLString = "https://www.googleapis.com/books/v1/volumes?q="
-        // Temp query
-        let query = "pr"
         
         guard let url = URL(string: baseURLString + query) else {
             completion(.failure(NetworkServiceError.badURL("URL or query you've entered is incorrect. Try to change it and search again.")))
@@ -30,6 +28,7 @@ class NetworkService: NetworkServiceProtocol {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let error = error {
+                print(error)
                 completion(.failure(error))
                 return
             }
@@ -43,6 +42,7 @@ class NetworkService: NetworkServiceProtocol {
                 let response = try JSONDecoder().decode(BookResponse.self, from: data)
                 completion(.success(response.items))
             } catch {
+                print(error)
                 completion(.failure(error))
             }
         }.resume()

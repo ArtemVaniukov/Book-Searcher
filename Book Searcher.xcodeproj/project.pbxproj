@@ -17,11 +17,13 @@
 		3A9E036327B1056B00BCBEDE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036227B1056B00BCBEDE /* Book.swift */; };
 		3A9E036627B1069700BCBEDE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036527B1069700BCBEDE /* NetworkService.swift */; };
 		3A9E036827B10F7E00BCBEDE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036727B10F7E00BCBEDE /* UIView+Extension.swift */; };
-		3A9E036A27B1103600BCBEDE /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036927B1103600BCBEDE /* SearchPresenter.swift */; };
+		3A9E036A27B1103600BCBEDE /* SearchViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036927B1103600BCBEDE /* SearchViewPresenter.swift */; };
 		3A9E036C27B1122400BCBEDE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036B27B1122400BCBEDE /* Router.swift */; };
 		3A9E036E27B1135600BCBEDE /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036D27B1135600BCBEDE /* AssemblyBuilder.swift */; };
 		3A9E037427B11D0800BCBEDE /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037327B11D0800BCBEDE /* BookCell.swift */; };
 		3A9E037827B1213F00BCBEDE /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */; };
+		3A9E037B27B1421000BCBEDE /* DetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037A27B1421000BCBEDE /* DetailViewPresenter.swift */; };
+		3A9E037D27B143C500BCBEDE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037C27B143C500BCBEDE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +58,13 @@
 		3A9E036227B1056B00BCBEDE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		3A9E036527B1069700BCBEDE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3A9E036727B10F7E00BCBEDE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		3A9E036927B1103600BCBEDE /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		3A9E036927B1103600BCBEDE /* SearchViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewPresenter.swift; sourceTree = "<group>"; };
 		3A9E036B27B1122400BCBEDE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3A9E036D27B1135600BCBEDE /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		3A9E037327B11D0800BCBEDE /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
+		3A9E037A27B1421000BCBEDE /* DetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewPresenter.swift; sourceTree = "<group>"; };
+		3A9E037C27B143C500BCBEDE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 			children = (
 				3A9E036427B1067D00BCBEDE /* ServiceLayer */,
 				3A9E036127B104CC00BCBEDE /* SearchScreenModule */,
+				3A9E037927B141F600BCBEDE /* DetailScreenModule */,
 				3A9E036027B1048700BCBEDE /* Misc */,
 				3A9E036B27B1122400BCBEDE /* Router.swift */,
 				3A9E036D27B1135600BCBEDE /* AssemblyBuilder.swift */,
@@ -188,7 +193,7 @@
 		3A9E037127B11C3000BCBEDE /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				3A9E036927B1103600BCBEDE /* SearchPresenter.swift */,
+				3A9E036927B1103600BCBEDE /* SearchViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -199,6 +204,31 @@
 				3A9E036727B10F7E00BCBEDE /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3A9E037927B141F600BCBEDE /* DetailScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E037E27B15C6400BCBEDE /* Presenter */,
+				3A9E037F27B15C6B00BCBEDE /* View */,
+			);
+			path = DetailScreenModule;
+			sourceTree = "<group>";
+		};
+		3A9E037E27B15C6400BCBEDE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E037A27B1421000BCBEDE /* DetailViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3A9E037F27B15C6B00BCBEDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A9E037C27B143C500BCBEDE /* DetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9E037D27B143C500BCBEDE /* DetailViewController.swift in Sources */,
 				3A9E036C27B1122400BCBEDE /* Router.swift in Sources */,
 				3A9E036827B10F7E00BCBEDE /* UIView+Extension.swift in Sources */,
 				3A9E036627B1069700BCBEDE /* NetworkService.swift in Sources */,
@@ -340,7 +371,8 @@
 				3A9E033127B1034100BCBEDE /* AppDelegate.swift in Sources */,
 				3A9E037827B1213F00BCBEDE /* ImageDownloadService.swift in Sources */,
 				3A9E033327B1034100BCBEDE /* SceneDelegate.swift in Sources */,
-				3A9E036A27B1103600BCBEDE /* SearchPresenter.swift in Sources */,
+				3A9E036A27B1103600BCBEDE /* SearchViewPresenter.swift in Sources */,
+				3A9E037B27B1421000BCBEDE /* DetailViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

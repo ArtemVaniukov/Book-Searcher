@@ -9,9 +9,9 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    var presenter: SearchPresenter!
+    var presenter: SearchViewPresenter!
     
-    private lazy var searchBar = UISearchBar(frame: .zero)
+    private lazy var searchBar = UISearchBar(frame: .infinite)
     private let bookCellID = "BookCellID"
     
     private lazy var tableView: UITableView = {
@@ -24,14 +24,9 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         setupSearchBar()
+        setupTableView()
         
         view.backgroundColor = .white
-        
-        tableView.delegate = self
-        // TODO: Move DataSource to a separate file
-        tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        
         view.addAutolayoutSubview(tableView)
     }
 
@@ -48,13 +43,15 @@ extension SearchViewController: SearchViewProtocol {
     }
     
     func error(with error: Error) {
+        // TODO: Move to a separate class
         let alertVC = UIAlertController(title: "WHOOPS!", message: error.localizedDescription, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
         present(alertVC, animated: true, completion: nil)
     }
 }
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+// TODO: Move DataSource to a separate file
+extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.books?.count ?? 0
     }
@@ -67,14 +64,40 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         if let book = presenter.books?[indexPath.row] {
             cell.setupCell(with: book)
         }
+        
         return cell
+    }
+}
+
+extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = presenter.books?[indexPath.row]
+        presenter.didTapBook(book)
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let query = searchBar.text {
+            presenter.getBooks(with: query)
+        }
     }
 }
 
 extension SearchViewController {
     private func setupSearchBar() {
+        searchBar.placeholder = "Search a book"
+        
         let navBarButton = UIBarButtonItem(customView: searchBar)
         navigationItem.leftBarButtonItem = navBarButton
+        
+        searchBar.delegate = self
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupLayout() {

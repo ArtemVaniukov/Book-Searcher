@@ -9,8 +9,6 @@ import Foundation
 
 
 struct BookResponse: Decodable {
-    let kind: String
-    let totalItems: Int
     let items: [Book]
 }
 
@@ -19,14 +17,13 @@ struct Book: Decodable {
 }
 
 struct VolumeInfo: Decodable {
-    let title: String
-    let authors: [String]
-    // TODO: - Debug "description" error "keyNotFound" response
-    //let description: String
+    let title: String?
+    let authors: [String]?
+    let description: String?
     let imageLinks: ImageLinks
 }
 
 struct ImageLinks: Decodable {
-    let smallThumbnail: String
-    let thumbnail: String
+    let smallThumbnail: String?
+    let thumbnail: String?
 }

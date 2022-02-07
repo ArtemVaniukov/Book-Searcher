@@ -1,5 +1,5 @@
 //
-//  SearchPresenter.swift
+//  SearchViewPresenter.swift
 //  Book Searcher
 //
 //  Created by Artem Vaniukov on 07.02.2022.
@@ -13,18 +13,18 @@ protocol SearchViewProtocol: AnyObject {
     func error(with error: Error)
 }
 
-protocol SearchViewPresenter: AnyObject {
+protocol SearchViewPresenterProtocol: AnyObject {
     var books: [Book]? { get set }
     init(view: SearchViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     func getBooks(with query: String)
     func didTapBook(_ book: Book?)
 }
 
-class SearchPresenter: SearchViewPresenter {
+class SearchViewPresenter: SearchViewPresenterProtocol {
     
-    weak var view: SearchViewProtocol?
-    var router: RouterProtocol?
-    let networkService: NetworkServiceProtocol
+    weak private var view: SearchViewProtocol?
+    private var router: RouterProtocol?
+    private let networkService: NetworkServiceProtocol
     
     var books: [Book]?
     
@@ -33,7 +33,6 @@ class SearchPresenter: SearchViewPresenter {
         self.view = view
         self.networkService = networkService
         self.router = router
-        getBooks(with: "programming")
     }
     
     

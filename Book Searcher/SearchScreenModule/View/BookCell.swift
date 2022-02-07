@@ -10,8 +10,8 @@ import UIKit
 
 class BookCell: UITableViewCell {
     
-    private var thumbnailView: UIImageView = {
-        $0.backgroundColor = .lightGray
+    private lazy var thumbnailView: UIImageView = {
+        $0.contentMode = .scaleAspectFit
         return $0
     }(UIImageView())
     
@@ -47,14 +47,7 @@ class BookCell: UITableViewCell {
     func setupCell(with book: Book) {
         self.book = book
     }
-    
-//    override func prepareForReuse() {
-//        thumbnailView.image = nil
-//        mainLabel.text = ""
-//        additionalLabel.text = ""
-//        book = nil
-//    }
-    
+        
 }
 
 extension BookCell {
@@ -62,17 +55,12 @@ extension BookCell {
         guard let book = book else { return }
         
         mainLabel.text = book.volumeInfo.title
-        additionalLabel.text = book.volumeInfo.authors.joined(separator: ", ")
+        additionalLabel.text = book.volumeInfo.authors?.joined(separator: ", ")
         
         let imageDownloadService = ImageDownloadService()
-        imageDownloadService.downloadImage(from: book.volumeInfo.imageLinks.smallThumbnail) { [weak self] result in
+        imageDownloadService.downloadImage(from: book.volumeInfo.imageLinks.smallThumbnail!) { [weak self] image in
             DispatchQueue.main.async {
-                switch result {
-                case .success(let image):
-                    self?.thumbnailView.image = image
-                case .failure(let error):
-                    print("Book Cell error: \(error)")
-                }
+                self?.thumbnailView.image = image
             }
         }
     }

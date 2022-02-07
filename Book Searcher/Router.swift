@@ -38,10 +38,10 @@ class Router: RouterProtocol {
     }
     
     func showDetail(with book: Book?) {
-        // TODO: Create Detail Module
+        if let navigationController = navigationController {
+            guard let detailViewController = assemblyBuilder?.createDetailModule(book: book, router: self) else { return }
+            navigationController.pushViewController(detailViewController, animated: true)
+        }
     }
-    
-    
-    
     
 }
