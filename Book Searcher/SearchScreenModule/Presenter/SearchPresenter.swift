@@ -5,7 +5,7 @@
 //  Created by Artem Vaniukov on 07.02.2022.
 //
 
-import Foundation
+import UIKit
 
 
 protocol SearchViewProtocol: AnyObject {
@@ -33,6 +33,7 @@ class SearchPresenter: SearchViewPresenter {
         self.view = view
         self.networkService = networkService
         self.router = router
+        getBooks(with: "programming")
     }
     
     
@@ -53,4 +54,5 @@ class SearchPresenter: SearchViewPresenter {
     func didTapBook(_ book: Book?) {
         router?.showDetail(with: book)
     }
+    
 }

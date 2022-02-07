@@ -20,6 +20,8 @@ protocol NetworkServiceProtocol {
 class NetworkService: NetworkServiceProtocol {
     func fetchBooks(with query: String, completion: @escaping (Result<[Book]?, Error>) -> Void) {
         let baseURLString = "https://www.googleapis.com/books/v1/volumes?q="
+        // Temp query
+        let query = "pr"
         
         guard let url = URL(string: baseURLString + query) else {
             completion(.failure(NetworkServiceError.badURL("URL or query you've entered is incorrect. Try to change it and search again.")))

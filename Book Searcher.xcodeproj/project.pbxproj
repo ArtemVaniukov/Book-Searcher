@@ -10,9 +10,7 @@
 		3A9E033127B1034100BCBEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E033027B1034100BCBEDE /* AppDelegate.swift */; };
 		3A9E033327B1034100BCBEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E033227B1034100BCBEDE /* SceneDelegate.swift */; };
 		3A9E033527B1034100BCBEDE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E033427B1034100BCBEDE /* SearchViewController.swift */; };
-		3A9E033827B1034100BCBEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E033627B1034100BCBEDE /* Main.storyboard */; };
 		3A9E033A27B1034500BCBEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E033927B1034500BCBEDE /* Assets.xcassets */; };
-		3A9E033D27B1034500BCBEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9E033B27B1034500BCBEDE /* LaunchScreen.storyboard */; };
 		3A9E034827B1034500BCBEDE /* Book_SearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E034727B1034500BCBEDE /* Book_SearcherTests.swift */; };
 		3A9E035227B1034500BCBEDE /* Book_SearcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E035127B1034500BCBEDE /* Book_SearcherUITests.swift */; };
 		3A9E035427B1034500BCBEDE /* Book_SearcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E035327B1034500BCBEDE /* Book_SearcherUITestsLaunchTests.swift */; };
@@ -22,6 +20,8 @@
 		3A9E036A27B1103600BCBEDE /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036927B1103600BCBEDE /* SearchPresenter.swift */; };
 		3A9E036C27B1122400BCBEDE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036B27B1122400BCBEDE /* Router.swift */; };
 		3A9E036E27B1135600BCBEDE /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E036D27B1135600BCBEDE /* AssemblyBuilder.swift */; };
+		3A9E037427B11D0800BCBEDE /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037327B11D0800BCBEDE /* BookCell.swift */; };
+		3A9E037827B1213F00BCBEDE /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +46,7 @@
 		3A9E033027B1034100BCBEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9E033227B1034100BCBEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3A9E033427B1034100BCBEDE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		3A9E033727B1034100BCBEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A9E033927B1034500BCBEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A9E033C27B1034500BCBEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A9E033E27B1034500BCBEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9E034327B1034500BCBEDE /* Book SearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Book SearcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9E034727B1034500BCBEDE /* Book_SearcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book_SearcherTests.swift; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		3A9E036927B1103600BCBEDE /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		3A9E036B27B1122400BCBEDE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3A9E036D27B1135600BCBEDE /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		3A9E037327B11D0800BCBEDE /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +145,6 @@
 			children = (
 				3A9E033027B1034100BCBEDE /* AppDelegate.swift */,
 				3A9E033227B1034100BCBEDE /* SceneDelegate.swift */,
-				3A9E033627B1034100BCBEDE /* Main.storyboard */,
-				3A9E033B27B1034500BCBEDE /* LaunchScreen.storyboard */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -165,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9E036527B1069700BCBEDE /* NetworkService.swift */,
+				3A9E037727B1213F00BCBEDE /* ImageDownloadService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -181,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9E033427B1034100BCBEDE /* SearchViewController.swift */,
+				3A9E037327B11D0800BCBEDE /* BookCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,9 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A9E033D27B1034500BCBEDE /* LaunchScreen.storyboard in Resources */,
 				3A9E033A27B1034500BCBEDE /* Assets.xcassets in Resources */,
-				3A9E033827B1034100BCBEDE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +334,11 @@
 				3A9E036827B10F7E00BCBEDE /* UIView+Extension.swift in Sources */,
 				3A9E036627B1069700BCBEDE /* NetworkService.swift in Sources */,
 				3A9E036E27B1135600BCBEDE /* AssemblyBuilder.swift in Sources */,
+				3A9E037427B11D0800BCBEDE /* BookCell.swift in Sources */,
 				3A9E036327B1056B00BCBEDE /* Book.swift in Sources */,
 				3A9E033527B1034100BCBEDE /* SearchViewController.swift in Sources */,
 				3A9E033127B1034100BCBEDE /* AppDelegate.swift in Sources */,
+				3A9E037827B1213F00BCBEDE /* ImageDownloadService.swift in Sources */,
 				3A9E033327B1034100BCBEDE /* SceneDelegate.swift in Sources */,
 				3A9E036A27B1103600BCBEDE /* SearchPresenter.swift in Sources */,
 			);
@@ -375,25 +375,6 @@
 			targetProxy = 3A9E034E27B1034500BCBEDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3A9E033627B1034100BCBEDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A9E033727B1034100BCBEDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3A9E033B27B1034500BCBEDE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A9E033C27B1034500BCBEDE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A9E035527B1034500BCBEDE /* Debug */ = {
@@ -524,7 +505,7 @@
 				INFOPLIST_FILE = "Book Searcher/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -536,7 +517,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -552,7 +533,7 @@
 				INFOPLIST_FILE = "Book Searcher/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,7 +545,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
